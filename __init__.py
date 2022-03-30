@@ -1,4 +1,21 @@
-from optical_rl_gym.envs.rmsa_env import RMSAEnv
-from optical_rl_gym.envs.deeprmsa_env import DeepRMSAEnv
-from optical_rl_gym.envs.rwa_env import RWAEnv
-from optical_rl_gym.envs.qos_constrained_ra import QoSConstrainedRA
+from gym.envs.registration import register
+
+register(
+    id='RMSA-v0',
+    entry_point='optical_rl_gym.envs:RMSAEnv',
+)
+
+register(
+    id='DeepRMSA-v0',
+    entry_point='optical_rl_gym.envs:DeepRMSAEnv',
+)
+
+register(
+    id='RWA-v0',
+    entry_point='optical_rl_gym.envs:RWAEnv',
+)
+
+register(
+    id='QoSConstrainedRA-v0',
+    entry_point='optical_rl_gym.envs:QoSConstrainedRA',
+)
